@@ -41,7 +41,7 @@ namespace Cashback.Service
                     Description = "Cashback API v1",
                 });
 
-                s.IncludeXmlComments(MontarPathArquivoXmlSwagger());
+                s.IncludeXmlComments("Cashback.Service.xml");
 
             });
         }
