@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
+using System;
+using System.IO;
+using System.Reflection;
 
 namespace Cashback.Service
 {
@@ -22,10 +25,6 @@ namespace Cashback.Service
         
         public void ConfigureServices(IServiceCollection services)
         {
-
-            //Cashback.Infrastructure.ExternalServices.SpotifyService.SpotifyService spotify = new Infrastructure.ExternalServices.SpotifyService.SpotifyService();
-            //spotify.GetAlbumsByGenre();
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddMediatR(typeof(Startup));
@@ -42,9 +41,9 @@ namespace Cashback.Service
                 });
 
                 // Set the comments path for the Swagger JSON and UI.
-                //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                //s.IncludeXmlComments(xmlPath);
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                s.IncludeXmlComments(xmlPath);
 
             });
         }

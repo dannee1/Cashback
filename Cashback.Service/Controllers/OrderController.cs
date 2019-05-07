@@ -66,9 +66,9 @@ namespace Cashback.Service.Controllers
         }
 
         /// <summary>
-        /// Carrinho de compras
+        /// Efetuar uma pedido
         /// </summary>
-        /// <param name="basketViewModel"></param>
+        /// <param name="basketViewModel">Dados do pedido</param>
         /// <returns></returns>
         [HttpPost()]
         public IActionResult PlaceOrder(BasketViewModel basketViewModel)
