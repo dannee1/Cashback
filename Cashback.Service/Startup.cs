@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.PlatformAbstractions;
 using Swashbuckle.AspNetCore.Swagger;
 using System;
 using System.IO;
@@ -40,15 +41,23 @@ namespace Cashback.Service
                     Description = "Cashback API v1",
                 });
 
-                // Set the comments path for the Swagger JSON and UI.
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                s.IncludeXmlComments(xmlPath);
+                s.IncludeXmlComments(MontarPathArquivoXmlSwagger());
 
             });
         }
 
-        
+        private string MontarPathArquivoXmlSwagger()
+        {
+            string caminhoAplicacao =
+                   PlatformServices.Default.Application.ApplicationBasePath;
+            string nomeAplicacao =
+                PlatformServices.Default.Application.ApplicationName;
+            string caminhoXmlDoc =
+                Path.Combine(caminhoAplicacao, $"{nomeAplicacao}.xml");
+
+            return caminhoXmlDoc;
+        }
+
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
