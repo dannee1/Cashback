@@ -1,8 +1,8 @@
-﻿Cashback App
+# Cashback App
 
 =====================
   
-  API .NET Core
+  ## API .NET Core
  
   Venda e Calculo de valor de cashback de cada compra.
 
@@ -13,22 +13,31 @@
 - Registrar uma nova venda de discos calculando o valor total de cashback.
 - Integrar com a API do SPotify para alimenar a coleção de Discos.
 
-## Como rodar a aplicação:
+# Como rodar a aplicação:
 - Possuir a ultima versão do  SDK (https://dot.net/core)
 
- # .NET CLI
+ ## Docker
+  Apartir do diretório clonado da aplicação:
+  - docker build -t cashback .
+  - docker run -d -p 8080:80 --name cash cashback
+
+ ## .NET CLI
   Apartir do diretório clonado da aplicação:
   dotnet run --project Cashback.Service\Cashback.Service.csProj
 
   Acessar o Swagger para visualizar os endPoint e testar as chamadas
   https://localhost:5001/swagger/index.html
   
-  # informações importantes :
+  ## informações importantes :
   
    - A aplicação esta utilizando EF Core in memory ( Apenas para testes), portanto os dados só serão mantidos durante o ciclo de vida da aplicação.
    - Os dados de clientes (Buyers) e de discos estão sendo criados no momento da inicialização
    - Os discos são buscados através da API do Spotify.
    - Divida Técnica: A Api esta retornando classes do dominio ao invés de serem mapeadas para ViewModels (Automapper) 
+
+## Ferramentas de CI
+- Travis
+- Circle CI
 
 ## Tecnologias Utilizadas:
 
