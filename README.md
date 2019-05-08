@@ -33,7 +33,7 @@
    - A aplicação esta utilizando EF Core in memory ( Apenas para testes), portanto os dados só serão mantidos durante o ciclo de vida da aplicação.
    - Os dados de clientes (Buyers) e de discos estão sendo criados no momento da inicialização
    - Os discos são buscados através da API do Spotify.
-   - Divida Técnica: A Api esta retornando classes do dominio ao invés de serem mapeadas para ViewModels (Automapper) 
+   - TODO: A Api esta retornando classes do dominio ao invés de serem mapeadas para ViewModels (Automapper) 
 
 ## Ferramentas de CI
 - Travis
