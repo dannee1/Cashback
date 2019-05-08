@@ -33,4 +33,10 @@
     <ProjectReference Include="..\Cashback.Spotify\Cashback.ExternalServices.Spotify.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Cashback.Service.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
