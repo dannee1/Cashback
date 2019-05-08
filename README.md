@@ -18,8 +18,8 @@
 
  ## Docker
   Apartir do diretório clonado da aplicação:
-  docker build -t cashback .
-  docker run -d -p 8080:80 --name cash cashback
+  - docker build -t cashback .
+  - docker run -d -p 8080:80 --name cash cashback
 
  ## .NET CLI
   Apartir do diretório clonado da aplicação:
