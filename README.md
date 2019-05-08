@@ -1,8 +1,8 @@
-﻿Cashback App
+## Cashback App
 
 =====================
   
-  API .NET Core
+  ## API .NET Core
  
   Venda e Calculo de valor de cashback de cada compra.
 
