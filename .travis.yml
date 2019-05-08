@@ -6,4 +6,4 @@ dotnet: 2.2
 script:
     - dotnet restore
     - dotnet build
-    - dotnet test Cashback.Domain.Tests\Cashback.Domain.Tests.csproj --filter TestCategory!=OPTIONAL-TEST
+    - dotnet test Cashback.Domain.Tests\Cashback.Domain.Tests.csproj
