@@ -8,7 +8,7 @@ namespace Cashback.Domain.Entities
 {
     public class Disk: BaseEntity, IAggregateRoot
     {
-        private const decimal PRICE_MIN = 0.1M;
+        private const decimal PRICE_MIN = 0.01M;
         private const decimal PRICE_MAX = 9000.9m;
 
         public string Name { get; set; }

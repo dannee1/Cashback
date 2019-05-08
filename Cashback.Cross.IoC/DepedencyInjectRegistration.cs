@@ -38,9 +38,9 @@ namespace Cashback.Cross.IoC
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             //Context
-            //services.AddScoped<DiskEcommerceContext>();
-            //services.AddScoped<DbContextOptions<DiskEcommerceContext>>();
-            services.AddDbContext<DiskEcommerceContext>(opt => opt.UseInMemoryDatabase("eCashback",null));
+            //services.AddScoped<CashbackContext>();
+            //services.AddScoped<DbContextOptions<CashbackContext>>();
+            services.AddDbContext<CashbackContext>(opt => opt.UseInMemoryDatabase("eCashback",null));
 
             //Commands
             services.AddScoped<IRequestHandler<PlaceOrderCommand,Unit>, PlaceOrderCommandHandler>();

@@ -9,7 +9,7 @@ using System.IO;
 
 namespace Cashback.Database.Context
 {
-    public class DiskEcommerceContext : DbContext
+    public class CashbackContext : DbContext
     {
         public DbSet<Order> Orders { get; set; }
         public DbSet<Buyer> Buyers { get; set; }
@@ -17,7 +17,7 @@ namespace Cashback.Database.Context
         public DbSet<OrderCashback> Cashbacks { get; set; }
 
 
-        public DiskEcommerceContext(DbContextOptions<DiskEcommerceContext> options) : base(options)
+        public CashbackContext(DbContextOptions<CashbackContext> options) : base(options)
         { }
 
 

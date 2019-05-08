@@ -13,9 +13,9 @@ namespace Cashback.Database.Repositories
 {
     public class OrderRepository : IOrderRepository
     {
-        private readonly DiskEcommerceContext _context;
+        private readonly CashbackContext _context;
 
-        public OrderRepository(DiskEcommerceContext context)
+        public OrderRepository(CashbackContext context)
         {
             _context = context;
         }

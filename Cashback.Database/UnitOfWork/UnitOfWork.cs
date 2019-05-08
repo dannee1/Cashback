@@ -5,9 +5,9 @@ namespace Cashback.Database.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly DiskEcommerceContext _context;
+        private readonly CashbackContext _context;
 
-        public UnitOfWork(DiskEcommerceContext context)
+        public UnitOfWork(CashbackContext context)
         {
             _context = context;
         }

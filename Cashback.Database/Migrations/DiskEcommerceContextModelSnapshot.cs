@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cashback.Database.Migrations
 {
-    [DbContext(typeof(DiskEcommerceContext))]
-    partial class DiskEcommerceContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(CashbackContext))]
+    partial class CashbackContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

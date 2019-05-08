@@ -12,9 +12,9 @@ namespace Cashback.Database.Repositories
 {
     public class BuyerRepository : IBuyerRepository
     {
-        private readonly DiskEcommerceContext _context;
+        private readonly CashbackContext _context;
 
-        public BuyerRepository(DiskEcommerceContext context)
+        public BuyerRepository(CashbackContext context)
         {
             _context = context;
         }

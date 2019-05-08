@@ -13,7 +13,7 @@ namespace Cashback.Service.Sync
     {
         public static void Sync(IServiceProvider serviceProvider)
         {
-            DiskEcommerceContext context = serviceProvider.GetRequiredService<DiskEcommerceContext>();
+            CashbackContext context = serviceProvider.GetRequiredService<CashbackContext>();
             SpotifyService spotifyService = (SpotifyService)serviceProvider.GetRequiredService<ISpotifyService>();
 
             List<Disk> disks = spotifyService.Get50AlbumsForEachGenre();

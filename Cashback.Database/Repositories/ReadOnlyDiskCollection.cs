@@ -11,9 +11,9 @@ namespace Cashback.Database.Repositories
 {
     public class ReadOnlyDiskCollection : IDiskReadRepositoy
     {
-        private readonly DiskEcommerceContext _context;
+        private readonly CashbackContext _context;
 
-        public ReadOnlyDiskCollection(DiskEcommerceContext context)
+        public ReadOnlyDiskCollection(CashbackContext context)
         {
             _context = context;
         }

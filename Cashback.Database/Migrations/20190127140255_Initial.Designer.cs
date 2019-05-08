@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cashback.Database.Migrations
 {
-    [DbContext(typeof(DiskEcommerceContext))]
+    [DbContext(typeof(CashbackContext))]
     [Migration("20190127140255_Initial")]
     partial class Initial
     {
