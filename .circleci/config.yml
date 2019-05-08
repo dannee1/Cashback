@@ -13,7 +13,6 @@ jobs:
          name: Build App
          command:
            dotnet build
-
      - run:
         name: Test App
         command:
