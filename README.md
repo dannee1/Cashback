@@ -16,6 +16,11 @@
 ## Como rodar a aplicação:
 - Possuir a ultima versão do  SDK (https://dot.net/core)
 
+ # Docker
+  Apartir do diretório clonado da aplicação:
+  docker build -t cashback .
+  docker run -d -p 8080:80 --name cash cashback
+
  # .NET CLI
   Apartir do diretório clonado da aplicação:
   dotnet run --project Cashback.Service\Cashback.Service.csProj
@@ -29,6 +34,10 @@
    - Os dados de clientes (Buyers) e de discos estão sendo criados no momento da inicialização
    - Os discos são buscados através da API do Spotify.
    - Divida Técnica: A Api esta retornando classes do dominio ao invés de serem mapeadas para ViewModels (Automapper) 
+
+## Ferramentas de CI
+- Travis
+- Circle CI
 
 ## Tecnologias Utilizadas:
 
