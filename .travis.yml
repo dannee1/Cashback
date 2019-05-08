@@ -6,5 +6,5 @@ dotnet: 2.2
 script:
     - dotnet restore
     - dotnet build
-    - dotnet test Cashback.Domain.Tests\Cashback.Domain.Tests.csproj
+    - dotnet test ./Cashback.Domain.Tests/Cashback.Domain.Tests.csproj
     
