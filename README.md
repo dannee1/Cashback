@@ -25,7 +25,7 @@
   Apartir do diretório clonado da aplicação:
   dotnet run --project Cashback.Service\Cashback.Service.csProj
 
-  Acessar o Swagger para visualizar os endPoint e testar as chamadas
+  Acessar o Swagger para visualizar o endpoint e testar as chamadas
   https://localhost:5001/swagger/index.html
   
   ## informações importantes :
