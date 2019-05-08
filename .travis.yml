@@ -7,3 +7,4 @@ script:
     - dotnet restore
     - dotnet build
     - dotnet test Cashback.Domain.Tests\Cashback.Domain.Tests.csproj
+    
